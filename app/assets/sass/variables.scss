@@ -1,0 +1,57 @@
+@font-face {
+	font-family: MaliBlack;
+	src: local('Mali'), url(../fonts/Muli/Muli-Black.ttf);
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: MaliExtraBold;
+	src: local('Mali'), url(../fonts/Muli/Muli-ExtraBold.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: MaliBold;
+	src: local('Mali'), url(../fonts/Muli/Muli-Bold.ttf);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: MaliSemiBold;
+	src: local('Mali'), url(../fonts/Muli/Muli-SemiBold.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: MaliRegular;
+	src: local('Mali'), url(../fonts/Muli/Muli-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: MaliLight;
+	src: local('Mali'), url(../fonts/Muli/Muli-Light.ttf);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: MaliExtraLight;
+	src: local('Mali'), url(../fonts/Muli/Muli-ExtraLight.ttf);
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: Playfair;
+	src: local('Playfair'), url(../fonts/Playfair-Black/playfair-display-black.ttf);
+}
+
+:root {
+	--colorVioletBlueDark: #290a59;
+	--colorVioletBlueDarkRGB: 41, 10, 89;
+
+	--colorGreenLight: #00e558;
+	--colorGreenLightRGB: 0, 229, 88;
+
+	--colorWhite: #ffffff;
+	--colorWhiteDark: #e9ecef;
+}
