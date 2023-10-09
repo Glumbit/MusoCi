@@ -1,0 +1,1 @@
+function menuShow(){window.addEventListener("click",(function(e){var n=null==e?void 0:e.target,c=document.querySelector("#header__burger");null==n.closest(".burger")?c.checked=!1:c.checked=!0}))}menuShow();

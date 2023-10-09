@@ -1,8 +1,133 @@
 .intro {
+	position: relative;
 	height: 100vh;
 	background-color: var(--colorBlack);
-	background-image: url('../img/speaker.webp');
-	background-repeat: no-repeat;
-	background-position: 75% center;
-	background-size: 30%;
+	overflow: hidden;
+
+	&__speaker {
+		position: absolute;
+		z-index: 2;
+		right: 20%;
+		top: 50%;
+		translate: 0px -50%;
+
+		animation-name: speakerWaves;
+		animation-fill-mode: forwards;
+		animation-duration: 2500ms;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+
+	&__waves {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100vh;
+	}
+
+	&__wave {
+		width: 10%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		box-shadow: inset 0 0 5px 1px#D24444;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		right: 23%;
+		translate: -50% -50%;
+		animation-name: waves;
+		animation-fill-mode: forwards;
+		animation-duration: 5000ms;
+		animation-timing-function: ease-out;
+		animation-iteration-count: infinite;
+
+		&:nth-child(2) {
+			animation-delay: 2500ms;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+		height: 100%;
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+		color: var(--colorWhite);
+	}
+
+	&__logo {
+		position: absolute;
+		top: 30px;
+		align-self: flex-start;
+	}
+
+	&__data {
+		padding: 40px 60px;
+		background-color: rgba(var(--colorWhiteRGB), 0.2);
+		backdrop-filter: blur(3px);
+		clip-path: polygon(99.41% 4.28%, 93.51% 56.61%, 94.45% 85.37%, 55.5% 99.08%, 6.67% 96.26%, 1.76% 73.94%, 5.43% 14.52%, 2.43% 0.52%);
+	}
+
+	&__title {
+		font-weight: 500;
+		margin-bottom: 30px;
+		font-size: 1.9rem;
+		line-height: 2.2rem;
+		letter-spacing: 0.04rem;
+	}
+
+	&__list {
+		gap: 15px;
+		list-style: disc;
+		padding-left: 30px;
+		font-size: 1.1rem;
+	}
+
+	&__btn {
+		color: var(--colorBlack);
+		padding: 20px 100px;
+
+		&:before {
+			clip-path: polygon(90.49% 0%, 100% 100%, 78.963% 83.019%, 0% 100%, 7.781% 0%, 14.265% 18.868%, 90.49% 0%);
+		}
+
+		&:after {
+			clip-path: polygon(90.49% 0%, 100% 100%, 78.963% 83.019%, 0% 100%, 7.781% 0%, 14.265% 18.868%, 90.49% 0%);
+		}
+	}
+}
+
+@keyframes speakerWaves {
+	0% {
+		scale: 1;
+	}
+
+	94% {
+		scale: 1;
+	}
+
+	97% {
+		scale: 1.05;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
+
+@keyframes waves {
+	0% {
+		scale: 1;
+	}
+
+	100% {
+		scale: 20;
+	}
 }
